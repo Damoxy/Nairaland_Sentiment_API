@@ -56,7 +56,7 @@ def add_to_word_list(strings):
         k += 1
 
 
-searchTerm = input("Enter search term: ")
+searchTerm ="LotusBeta"
 
 
 j = 0
