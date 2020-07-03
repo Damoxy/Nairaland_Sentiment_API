@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 from textblob import TextBlob
 import matplotlib.pyplot as plt
-import urllib
+import urllib3
 
 WordList = []
 
@@ -36,7 +36,7 @@ def word_count(string):
 
 def search_item(search_term, next=False, page=0):
     if next == False:
-        page = requests.get("https://www.nairaland.com/search?q=" + urllib.parse.quote_plus(str(search_term)) )
+        page = requests.get("https://www.nairaland.com/search?q=" + urllib3.parse.quote_plus(str(search_term)) )
     else:
         page = requests.get("https://www.nairaland.com/search/"
                             + str(search_term) + "/0/" + str(page))
